@@ -1,2 +1,22 @@
-@import './common';
-@import './example';
+// Utils
+@import './utils/breakpoints';
+@import './utils/variables';
+@import './utils/placeholder';
+@import './utils/mixins';
+
+// Base
+@import './base/common';
+@import './base/reset';
+
+
+// Layouts
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/offerings';
+@import './layouts/favorites';
+@import './layouts/customers-say';
+@import './layouts/subsribe';
+@import './layouts/footer';
+
+// Components
+
