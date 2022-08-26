@@ -1,0 +1,25 @@
+// .header {
+// }
+.header__container {
+  @extend %container;
+}
+.logo {
+  @extend %link;
+}
+// .nav {
+// }
+.nav__list {
+  @extend %list;
+}
+// .nav__item {
+// }
+.nav-link {
+  @extend %link;
+}
+// .nav-link__text {
+// }
+// .menu-btn {
+// }
+.subsribe-btn {
+  display: none;
+}
