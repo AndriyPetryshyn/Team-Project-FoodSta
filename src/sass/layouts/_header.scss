@@ -35,13 +35,20 @@
 // }
 .nav-link {
   @extend %link;
-}
-.nav-link__text {
   font-weight: 400;
   font-size: 14px;
   line-height: calc(16 / 14);
   color: $color-black;
+  transition: color $bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $color-green;
+    text-decoration-line: underline;
+  }
 }
+// .nav-link__text {
+// }
 .menu-btn {
   display: flex;
   align-items: center;
@@ -49,18 +56,17 @@
   margin-left: auto;
   width: 28px;
   height: 28px;
-
   background-color: transparent;
   fill: $color-green-dark;
   border: none;
   cursor: pointer;
-
   @media screen and (min-width: 768px) {
     display: none;
   }
 }
 .subsribe-btn {
   display: none;
+  cursor: pointer;
   @media screen and (min-width: 768px) {
     display: initial;
     margin-left: 28px;
@@ -69,6 +75,11 @@
     background: $color-green;
     border-radius: 30px;
     border: none;
+  }
+  transition: background-color $bezier;
+  &:hover,
+  &:focus {
+    background-color: $color-green-accent;
   }
 }
 .subscribe-btn__text {
