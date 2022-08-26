@@ -1,5 +1,12 @@
-// .header {
-// }
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: $color-white-second;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+}
 .header__container {
   @extend %container;
   display: flex;
@@ -7,6 +14,9 @@
 }
 .logo {
   @extend %link;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
 }
 .nav {
   margin-left: auto;
@@ -49,16 +59,16 @@
     display: none;
   }
 }
-
 .subsribe-btn {
   display: none;
-  @media screen and (min-width: 767px) {
+  @media screen and (min-width: 768px) {
     display: initial;
     margin-left: 28px;
     width: 100px;
     height: 32px;
     background: $color-green;
     border-radius: 30px;
+    border: none;
   }
 }
 .subscribe-btn__text {
