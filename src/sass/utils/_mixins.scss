@@ -1,3 +1,11 @@
+@import "./decimals";
+
+@mixin fonts($fs, $lh, $fw: 400) {
+    font-weight: $fw;
+    font-size: $fs;
+    line-height: decimal-round($lh / $fs);
+}
+
 @mixin centered-flex($type: flex,
     $justify-content: center,
     $align-items: center) {
@@ -5,6 +13,7 @@
     justify-content: $justify-content;
     align-items: $align-items;
 }
+
 @mixin flex-basis($indent, $item) {
     flex-basis: calc((100% - #{$indent} * (#{$item} - 1)) / #{$item});
 }
