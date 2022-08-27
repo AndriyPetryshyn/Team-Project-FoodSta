@@ -1,0 +1,15 @@
+.offering {
+  padding-bottom: 60px;
+}
+.offering__container {
+  @extend %container;
+}
+
+.offering__btn {
+  border: 2px solid #7eb101;
+  border-radius: 30px;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+}
