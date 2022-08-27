@@ -1,0 +1,16 @@
+.hero {
+  padding-top: 60px;
+}
+.hero__container {
+  @extend %container;
+}
+.hero__btn {
+  background: #bbf330;
+  border-radius: 30px;
+  border: none;
+  padding: 6px 18px;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 150%;
+}
