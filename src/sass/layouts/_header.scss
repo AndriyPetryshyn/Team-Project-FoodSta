@@ -23,7 +23,6 @@
 }
 .nav__list {
   @extend %list;
-
   display: none;
   @media screen and (min-width: 768px) {
     display: initial;
@@ -63,8 +62,16 @@
   @media screen and (min-width: 768px) {
     display: none;
   }
+  transition: fill $bezier;
+  &:hover,
+  &:focus {
+    fill: $color-yellow;
+  }
 }
-.subsribe-btn {
+.menu-btn__icon {
+  fill: currentColor;
+}
+.order-btn {
   display: none;
   cursor: pointer;
   @media screen and (min-width: 768px) {
@@ -82,7 +89,7 @@
     background-color: $color-green-accent;
   }
 }
-.subscribe-btn__text {
+.order-btn__text {
   font-weight: 400;
   font-size: 14px;
   line-height: 150%;
