@@ -1,0 +1,17 @@
+// Button 'Order Now' from header
+%order-btn {
+  margin-left: 28px;
+  width: 100px;
+  height: 32px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 150%;
+  background: $color-green;
+  border-radius: 30px;
+  border: none;
+  transition: background-color $bezier;
+  &:hover,
+  &:focus {
+    background-color: $color-green-accent;
+  }
+}

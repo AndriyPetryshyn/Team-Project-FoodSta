@@ -82,23 +82,8 @@
 .order-btn {
   display: none;
   cursor: pointer;
+  @extend %order-btn;
   @media screen and (min-width: $tablet) {
     display: initial;
-    margin-left: 28px;
-    width: 100px;
-    height: 32px;
-    background: $color-green;
-    border-radius: 30px;
-    border: none;
   }
-  transition: background-color $bezier;
-  &:hover,
-  &:focus {
-    background-color: $color-green-accent;
-  }
-}
-.order-btn__text {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
 }
