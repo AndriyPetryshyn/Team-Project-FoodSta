@@ -1,0 +1,19 @@
+p {
+    padding: 0;
+}
+
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    padding-left: 16px;
+    padding-right: 16px;
+}
+.list {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.footer_list {
+    display: flex;
+}
