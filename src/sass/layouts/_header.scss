@@ -1,0 +1,89 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background: $color-white-second;
+  box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
+}
+.header__container {
+  @extend %container;
+  display: flex;
+  align-items: center;
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+.logo {
+  @extend %link;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  cursor: pointer;
+}
+.nav {
+  margin-left: auto;
+}
+.nav__list {
+  @extend %list;
+  display: none;
+  @media screen and (min-width: $tablet) {
+    display: initial;
+    display: flex;
+    gap: 28px;
+  }
+}
+.nav-link {
+  @extend %link;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  color: $color-black;
+  transition: color $bezier;
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    color: $color-green;
+    text-decoration-line: underline;
+  }
+}
+
+.menu-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  width: 28px;
+  height: 28px;
+  background-color: transparent;
+  color: $color-green-dark;
+  border: none;
+  cursor: pointer;
+  @media screen and (min-width: $tablet) {
+    display: none;
+  }
+  transition: color $bezier;
+  &:hover,
+  &:focus {
+    color: $color-yellow;
+  }
+}
+.menu-btn__icon {
+  fill: currentColor;
+}
+.order-btn {
+  display: none;
+  cursor: pointer;
+  @extend %order-btn;
+  @media screen and (min-width: $tablet) {
+    display: initial;
+  }
+}
