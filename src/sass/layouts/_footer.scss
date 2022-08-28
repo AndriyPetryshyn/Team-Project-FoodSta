@@ -1,12 +1,33 @@
+:root {
+    --background-color: rgba(254, 254, 254, 1);
+    --footer-box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+    --primary-text-color: rgba(44, 44, 44, 1);
+    --footer-link-focus-color: rgba(187, 243, 48, 1);
+    --subscribe-input-border-color: rgba(255, 229, 80, 1);
+    --subscribe-input-text-color: #505050;
+    --subscribe-button-text-color: #2C2C2C;
+    --subscribe-button-border-color: rgba(126, 177, 1, 1);
+}
 p {
     padding: 0;
 }
 
 .container {
-    width: 1280px;
     margin: 0 auto;
     padding-left: 16px;
     padding-right: 16px;
+
+    @media screen and (min-width: 480px) {
+        width: 480px;
+    }
+
+    @media screen and (min-width: 768px) {
+        width: 768px;
+    }
+
+    @media screen and (min-width: 1200px) {
+        width: 1280px;
+    }
 }
 .list {
     padding: 0;
@@ -16,32 +37,35 @@ p {
 .link {
     text-decoration: none;
 }
-/*
-.footer .container {
-    display: flex;
-    align-items: baseline;
-}*/
+
 .footer {
-    
     /*background-image: url('../images/footer/fruit.jpg')  53px 129px;*/
     background-repeat: no-repeat;
     background-size: cover;
     margin-left: auto;
     margin-right: auto;
-    box-shadow: 0px -4px 24px rgba(105, 105, 105, 0.1);
+    box-shadow: var(--footer-box-shadow);
 
 }
 
 .footer_wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
+    padding-top: 100px;
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        /*display: block;*/
+    }
+    @media screen and (min-width: 1280px) {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    
 }
  
 
 .footer_nav {
-    /*padding-top: 100px;*/
     display: flex;
 }
 
@@ -57,11 +81,11 @@ p {
         margin-right: 28px;
     }
     & .link {
-        color: rgba(44, 44, 44, 1);
+        color: var(--primary-text-color);
     }
     & .link:hover,
     & .link:focus {
-        color: rgba(187, 243, 48, 1);
+        color: var(--footer-link-focus-color);
     }
 }
 
@@ -70,9 +94,9 @@ p {
 
 .subscribe {
     display: flex;
+    flex-direction: column;
     justify-content: flex-end;
-    /*margin-bottom: 80px;*/
-    /*padding-top: 100px;*/
+    margin-bottom: 80px;
 }
 
 .subscribe_title {
@@ -81,8 +105,8 @@ p {
     font-weight: 600;
     font-size: 14px;
     line-height: 150%;
-    /*margin-bottom: 12px;*/
-    color: rgba(44, 44, 44, 1);
+    margin-bottom: 12px;
+    color: var(--primary-text-color);
 }
 
 .subscribe_email {
@@ -99,21 +123,17 @@ p {
     height: 42px;
     padding-left: 12px;
 
-    color: #505050;
-    border: 1px solid rgba(255, 229, 80, 1);
-    background-color: rgba(254, 254, 254, 1);
+    color: var(--subscribe-input-text-color);
+    border: 1px solid var(--subscribe-input-border-color);
+    background-color: var(--background-color);
     border-radius: 30px;
 }
 .subscribe_button{
-    /*
-    display: flex;
-    align-items: flex-end;*/
-  
     font-family: 'Roboto';
     width: 102px;
     height: 42px;
     margin-left: 12px;
-    color: #2C2C2C;
+    color: var(--subscribe-button-text-color);
     
     font-family: 'Roboto';
     font-style: normal;
@@ -121,9 +141,15 @@ p {
     font-size: 12px;
     line-height: 150%;
     
-    background-color: rgba(254, 254, 254, 1);
+    background-color: var(--background-color);
     border-radius: 30px;
-    border: 1px solid rgba(126, 177, 1, 1);
+    border: 1px solid var(--subscribe-button-border-color);
+
+    &:hover,
+    &:focus {
+        background-color: var(--subscribe-input-border-color);
+        transition: background-color 250ms var(--subscribe-input-border-color);
+    }
 
     cursor: pointer;
 }
@@ -140,7 +166,7 @@ p {
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
-    color: rgba(126, 177, 1, 1);
+    color: var(--subscribe-button-border-color);
 }
 
 /*-------    privacy   -------*/
@@ -148,7 +174,7 @@ p {
     display: flex;
     text-decoration: none;
     align-items: center;
-    /*padding-bottom: 100px;*/
+    padding-bottom: 100px;
 
     & .privacy_item:nth-child(-n + 3) {
         margin-left: 20px;
@@ -156,16 +182,12 @@ p {
     & .privacy_item:nth-child(4) {
         margin-left: 600px;
     }
-    /*
-        & .privacy_item + .privacy_item {
-        margin-left: 20px;
-    }*/
 }
 
 .privacy_item {
-    color: rgba(44, 44, 44, 1);
+    color: var(--primary-text-color);
 }
 
 .privacy_link {
-    color: #7EB101;
+    color: var(--subscribe-button-border-color);
 }
