@@ -33,6 +33,7 @@ p {
 
 .footer {
     display: flex;
+    background-image: url('../images/footer/fruit.jpg') 53px 129px;
 }
 
 .footer_list {
@@ -63,6 +64,45 @@ p {
     padding-bottom: 12px;
     color: rgba(44, 44, 44, 1);
 
+}
+.subscribe_input {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-size: 12px;
+    line-height: 150%;
+
+
+    width: 279px;
+    height: 42px;
+    padding-left: 12px;
+
+    color: #505050;
+    border: 1px solid rgba(255, 229, 80, 1);
+    background-color: rgba(254, 254, 254, 1);
+    border-radius: 30px;
+}
+.subscribe_button{
+    /*
+    display: flex;
+    align-items: flex-end;*/
+  
+    font-family: 'Roboto';
+    width: 102px;
+    height: 42px;
+    margin-left: 12px;
+    color: #2C2C2C;
+    
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+    
+    background-color: rgba(254, 254, 254, 1);
+    border-radius: 30px;
+    border: 1px solid rgba(126, 177, 1, 1);
+
+    cursor: pointer;
 }
 .subscribe_text {
     font-family: 'Roboto';
