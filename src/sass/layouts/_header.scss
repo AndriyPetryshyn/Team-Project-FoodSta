@@ -1,4 +1,7 @@
 .header {
+  height: 72px;
+}
+.header__container {
   position: fixed;
   top: 0;
   left: 0;
@@ -6,8 +9,6 @@
   z-index: 100;
   background: $color-white-second;
   box-shadow: 0px 4px 24px rgba(105, 105, 105, 0.1);
-}
-.header__container {
   @extend %container;
   display: flex;
   align-items: center;
