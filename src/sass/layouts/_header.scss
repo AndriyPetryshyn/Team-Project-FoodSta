@@ -56,29 +56,6 @@
   }
 }
 
-.menu-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: auto;
-  width: 28px;
-  height: 28px;
-  background-color: transparent;
-  color: $color-green-dark;
-  border: none;
-  cursor: pointer;
-  @media screen and (min-width: $tablet) {
-    display: none;
-  }
-  transition: color $bezier;
-  &:hover,
-  &:focus {
-    color: $color-yellow;
-  }
-}
-.menu-btn__icon {
-  fill: currentColor;
-}
 .order-btn {
   display: none;
   cursor: pointer;
