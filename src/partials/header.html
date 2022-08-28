@@ -37,10 +37,46 @@
     <button class="order-btn" type="button">
       <span class="order-btn__text">Order Now</span>
     </button>
-    <button class="menu-btn" type="button">
+    <button class="menu-btn" type="button" data-menu-open>
       <svg class="menu-btn__icon" width="28" height="28">
         <use href="./images/header/icons.svg#icon-menu"></use>
       </svg>
     </button>
+  </div>
+  <div class="menu-overlay" data-menu>
+    <div class="mobile-container">
+      <button class="btn-close" type="button" data-menu-close>
+        <svg class="btn-close__icon" width="11" height="11">
+          <use href="./images/header/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a class="mobile-nav-link" href="#"
+            ><span class="mobile-nav-link__text">Home</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav-link" href="#"
+            ><span class="mobile-nav-link__text">About</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav-link" href="#"
+            ><span class="mobile-nav-link__text">Service</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav-link" href="#menu"
+            ><span class="mobile-nav-link__text">Menu</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav-link" href="#"
+            ><span class="mobile-nav-link__text">Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
   </div>
 </header>
