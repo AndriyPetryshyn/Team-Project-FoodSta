@@ -1,53 +1,72 @@
 <section class="offering__section">
   <div class="offering__container">
-    <picture class="offering__img">
-      <source
-        media="(min-width: 1280px)"
-        srcset="
-          ./images/offerings/aple-@1x_lg.png 1x,
-          ./images/offerings/aple-@1x_lg.png 2x
-        "
-        type="image/png"
-      />
-      <source
-        media="(min-width: 768px)"
-        srcset="
-          ./images/offerings/aple-@1x_lg.png 1x,
-          ./images/offerings/aple-@1x_lg.png 2x
-        "
-        type="image/png"
-      />
-      <img src="./images/offerings/aple-@1x_lg.png 1x" alt="salat" />
-    </picture>
-    <h2 class="offering__tittle">What’s Special About Our Offerings</h2>
-    <p class="offering__tittle-descr">
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-      varius enim in eros elementum tristique. Duis cursus, mi quis viverra
-      ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
-    </p>
-    <ul class="offering__list">
-      <li class="offering__item">
-        <svg width="32" height="32">
-          <use href="./images/offerings/icons.svg#rocket"></use>
-        </svg>
-        <h3 class="offering__subtittle">Fasest Delivery</h3>
-        <p class="offering__descr">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-      <svg width="32" height="32">
-        <use href="./images/offerings/icons.svg#touch"></use>
-      </svg>
-      <li class="offering__item">
-        <h3 class="offering__subtittle">Easy to order</h3>
-        <p class="offering__descr">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
-          varius enim in eros.
-        </p>
-      </li>
-    </ul>
-    <button class="offering__btn" type="submit">Order Now</button>
-    <span class="offering__txt">Read More</span>
+    <div class="offering__img-block">
+      <picture class="offering__img">
+        <source
+          media="(min-width: 1280px)"
+          srcset="
+            ./images/offerings/aple-@1x_lg.png 1x,
+            ./images/offerings/aple-@2x_lg.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(min-width: 768px)"
+          srcset="
+            ./images/offerings/aple-@1x_md.png 1x,
+            ./images/offerings/aple-@2x_md.png 2x
+          "
+          type="image/png"
+        />
+        <source
+          media="(max-width: 767.98px)"
+          srcset="
+            ./images/offerings/aple-@1x_sm.png 1x,
+            ./images/offerings/aple-@2x_sm.png 2x
+          "
+          type="image/png"
+        />
+        <img src="./images/offerings/aple-@1x_lg.png" alt="green apple" />
+      </picture>
+    </div>
+    <div class="offering__txt-block">
+      <h2 class="offering__tittle">What’s Special About Our Offerings</h2>
+      <p class="offering__tittle-descr">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+        varius enim in eros elementum tristique. Duis cursus, mi quis viverra
+        ornare, eros dolor interdum nulla, ut commodo diam libero vitae erat.
+      </p>
+      <ul class="offering__list">
+        <li class="offering__item">
+          <div class="offering__icon-block">
+            <svg class="offering__icon" width="32" height="32">
+              <use href="./images/offerings/icons.svg#rocket"></use>
+            </svg>
+          </div>
+          <h3 class="offering__subtittle">Fasest Delivery</h3>
+          <p class="offering__descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+        <li class="offering__item">
+          <div class="offering__icon-block">
+            <svg class="offering__icon" width="32" height="32">
+              <use href="./images/offerings/icons.svg#touch"></use>
+            </svg>
+          </div>
+          <h3 class="offering__subtittle">Easy to order</h3>
+          <p class="offering__descr">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse
+            varius enim in eros.
+          </p>
+        </li>
+      </ul>
+      <div class="offering__subescribe">
+        <button class="offering__btn" type="submit">Order Now</button>
+        <span class="offering__txt">Read More</span>
+      </div>
+    </div>
   </div>
 </section>
+../images/offerings/background/bg-@1x_lg.png

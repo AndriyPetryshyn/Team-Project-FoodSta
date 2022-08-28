@@ -1,25 +1,143 @@
 .offering {
-  padding-bottom: 60px;
+  &__section {
+    padding-bottom: 60px;
+    padding-top: 70px;
+
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+
+    margin-right: auto;
+    margin-left: auto;
+    //min-screen mobile
+    background-image: url(../images/offerings/background/bg-@1x_mm.png);
+
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/offerings/background/bg-@2x_mm.png);
+    }
+    // normal-screen mobile
+    @media screen and (min-width: $mobile) {
+      background-image: url(../images/offerings/background/bg-@1x_sm.png);
+    }
+    @media (min-device-pixel-ratio: 2),
+      (min-resolution: 192dpi),
+      (min-resolution: 2dppx) {
+      background-image: url(../images/offerings/background/bg-@2x_sm.png);
+    }
+
+    // tablet
+    @media screen and (min-width: $tablet) {
+      background-image: url(../images/offerings/background/bg-@1x_md.png);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/offerings/background/bg-@2x_md.png);
+      }
+    }
+
+    // desktop
+    @media screen and (min-width: $desktop) {
+      background-image: url(../images/offerings/background/bg-@1x_lg.png);
+
+      @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+        background-image: url(../images/offerings/background/bg-@2x_lg.png);
+      }
+    }
+  }
 
   &__container {
     @extend %container;
+    @media screen and (min-width: $desktop) {
+      display: flex;
+      padding-top: 231px;
+    }
+  }
+
+  &__img-block {
+    position: relative;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 60px;
+
+    height: 280px;
+    width: 280px;
+
+    background-color: #ffffff;
+
+    border: 11px solid #ffe550;
+    border-radius: 50%;
+
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5);
+
+    @media screen and (min-width: $tablet) {
+      min-height: 357px;
+      min-width: 357px;
+      margin-left: 0;
+    }
+    @media screen and (min-width: $desktop) {
+      min-height: 550px;
+      min-width: 550px;
+      margin-right: 114px;
+      margin-top: -24px;
+
+      border: 26px solid #ffe550;
+    }
+  }
+  &__img {
+    display: block;
+    position: absolute;
+    left: 30px;
+    bottom: 42px;
+    @media screen and (min-width: $tablet) {
+      left: 38px;
+      bottom: 61px;
+    }
+    @media screen and (min-width: $desktop) {
+      left: 60px;
+      bottom: 73px;
+    }
   }
   &__list {
     @extend %list;
+    margin-bottom: 28px;
+    gap: 28px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
+      gap: 116px;
+      display: flex;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 32px;
+      gap: 67px;
+    }
   }
+
   &__tittle {
+    margin-bottom: 28px;
+    max-width: 100%;
+
     font-size: 28px;
     line-height: calc(33 / 28);
 
     @media screen and (min-width: $tablet) {
+      margin-bottom: 20px;
       font-size: 42px;
       line-height: calc(49 / 42);
     }
   }
   &__tittle-descr {
+    margin-bottom: 28px;
+    max-width: 100%;
     font-size: 14px;
     line-height: calc(16 / 14);
     @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
       font-size: 16px;
       line-height: calc(19 / 16);
     }
@@ -28,7 +146,33 @@
       line-height: calc(24 / 16);
     }
   }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 28px;
+    }
+  }
+  &__icon-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 8px;
+
+    background-color: white;
+    border-radius: 50%;
+  }
+  &__icon {
+    fill: #7eb101;
+  }
   &__subtittle {
+    margin-bottom: 16px;
+
+    max-width: 100%;
+    max-width: 500px;
+
     font-size: 18px;
     line-height: 21px;
 
@@ -38,6 +182,9 @@
     }
   }
   &__descr {
+    max-width: 100%;
+    width: 252px;
+
     font-weight: 400;
     font-size: 14px;
     line-height: 16px;
@@ -46,12 +193,22 @@
       line-height: calc(21 / 14);
     }
   }
+  &__subescribe {
+    display: flex;
+    gap: 24px;
+  }
   &__btn {
+    display: block;
     border: 2px solid #7eb101;
     border-radius: 30px;
 
     font-weight: 500;
     font-size: 13px;
     line-height: 150%;
+  }
+  &__txt {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
   }
 }
