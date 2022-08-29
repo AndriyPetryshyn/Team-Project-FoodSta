@@ -10,20 +10,20 @@
     margin-left: auto;
 
     //min-screen mobile
-    background-image: url(../images/offerings/background/bg-@1x_mm.svg);
+    background-image: url(./images/offerings/background/bg-@1x_mm.svg);
 
     // tablet
     @media screen and (min-width: $tablet) {
       padding-top: 167px;
       padding-bottom: 100px;
-      background-image: url(../images/offerings/background/bg-@1x_md.svg);
+      background-image: url(./images/offerings/background/bg-@1x_md.svg);
     }
 
     // desktop
     @media screen and (min-width: $desktop) {
       padding-top: 263px;
       padding-bottom: 43px;
-      background-image: url(../images/offerings/background/bg-@1x_lg.svg);
+      background-image: url(./images/offerings/background/bg-@1x_lg.svg);
     }
   }
 
