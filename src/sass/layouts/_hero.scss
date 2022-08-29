@@ -3,10 +3,12 @@
     @extend %section;
 
     @media screen and (max-width: 767px) {
-      padding-bottom: 50px;
+      padding-bottom: 40px;
+    }
+    @media screen and (min-width: $tablet) {
+      padding-bottom: 0px;
     }
     @media screen and (min-width: $desktop) {
-      padding-bottom: -161px;
     }
   }
 
