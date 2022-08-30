@@ -1,0 +1,142 @@
+.customers {
+  @extend %section;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-image: url(/src/images/customers/bg/bg_xs@.png);
+
+  @media screen and (min-width: 321px) {
+    background-image: url(/src/images/customers/bg/bg_s.png);
+  }
+
+  @media screen and (min-width: $tablet) {
+    background-image: url(/src/images/customers/bg/bg_m.png);
+  }
+
+  @media screen and (min-width: $desktop) {
+    background-image: url(/src/images/customers/bg/bg_l.png);
+  }
+}
+
+.customers__container {
+  @extend %container;
+
+  @media screen and (min-width: $tablet) {
+    padding-right: 32px;
+    padding-left: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+}
+
+.customers__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: calc(33 / 28);
+  text-align: left;
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 42px;
+    line-height: calc(49 / 42);
+  }
+}
+
+.customers__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(16 / 14);
+  margin-bottom: 32px;
+  text-align: left;
+
+  @media screen and (min-width: $tablet) {
+    font-size: 16px;
+    line-height: calc(19 / 16);
+  }
+}
+
+.custumers__list {
+  @extend %list;
+  display: grid;
+  gap: 24px;
+  justify-items: center;
+
+  @media screen and (min-width: $tablet) {
+    // display: flex;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    gap: 132px;
+  }
+}
+
+.custumers__item {
+  padding: 8px;
+  background: $color-white-second;
+  border-radius: 0px 30px 30px 30px;
+  max-width: 440px;
+
+  @media screen and (min-width: $tablet) {
+    padding: 12px;
+    max-width: 336px;
+  }
+
+  @media screen and (min-width: $desktop) {
+    max-width: 501px;
+    padding: 14px;
+  }
+}
+
+.custumers__box-stars {
+  margin-bottom: 28px;
+}
+
+.custumers__icon {
+  fill: $color-yellow;
+}
+
+.custumers-item__text {
+  font-weight: 700;
+  font-size: 16px;
+  line-height: calc(19 / 16);
+
+  @media screen and (min-width: $tablet) {
+    font-size: 18px;
+    line-height: calc(21 / 18);
+  }
+}
+
+.custumers-item__box {
+  display: flex;
+  margin-top: 40px;
+}
+
+.custumer-item__img {
+  margin-right: 17px;
+}
+
+.custumers__thumb {
+  padding-right: 15px;
+  border-right: 1px solid $color-green-dark;
+}
+
+.custumers__subtitle {
+  //   font-weight: 500;
+  font-size: 14px;
+  line-height: calc(21/ 14);
+}
+
+.custumers__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: calc(21 / 14);
+}
+
+
+
