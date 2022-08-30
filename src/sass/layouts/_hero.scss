@@ -5,10 +5,11 @@
       padding-bottom: 60px;
     }
     @media screen and (min-width: $tablet) {
-      margin-bottom: -108px;
+      margin-bottom: -30px;
     }
     @media screen and (min-width: $desktop) {
       padding-top: 93px;
+      margin-bottom: -150px;
     }
   }
 
@@ -79,7 +80,14 @@
     font-size: 13px;
     line-height: calc(20 / 13);
 
+    transition: background-color $bezier;
+
     background: #bbf330;
+
+    &:hover,
+    &:focus {
+      background-color: #b5ff00;
+    }
   }
   &__img-block {
     @media screen and (max-width: 767px) {
