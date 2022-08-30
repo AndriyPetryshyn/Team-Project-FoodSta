@@ -15,9 +15,6 @@ p {
 
 .container {
     margin: 0 auto;
-    padding-left: 16px;
-    padding-right: 16px;
-
     @media screen and (min-width: 480px) {
         width: 480px;
     }
@@ -26,8 +23,21 @@ p {
         width: 768px;
     }
 
-    @media screen and (min-width: 1200px) {
+    @media screen and (min-width: 1280px) {
         width: 1280px;
+    }
+
+    @media screen and (min-width: 480px) and(max-width: 767px) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    @media screen and (min-width: 768px) and(max-width: 1279px) {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    @media screen and (min-width: 1200px) {
+        padding-left: 16px;
+        padding-right: 16px;
     }
 }
 .list {
@@ -54,6 +64,9 @@ p {
 
 .footer_wrap {
     padding-top: 100px;
+    @media screen and (max-width: 767px) {
+        padding-top: 60px;
+    }
 
     @media screen and (min-width: 1280px) {
         display: flex;
@@ -71,7 +84,16 @@ p {
 }
 
 .footer_logo {
-    margin-right: 154px;
+    @media screen and (max-width: 767px) {
+        margin-right: 81px;
+    }
+    @media screen and (min-width: 768px) and(max-width: 1279px) {
+        margin-right: 114px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-right: 154px;
+    }
+    
 }
 .footer_list {
     display: flex;
@@ -90,14 +112,24 @@ p {
     }
 }
 
-
 /* -----  subscribe  -------*/
 
 .subscribe {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
-    margin-bottom: 80px;
+    
+    @media screen and (max-width: 767px) {
+        margin-top: 40px;
+        margin-bottom: 60px;
+    }
+    @media screen and (min-width: 768px) and (max-width: 1279px)  {
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    @media screen and (min-width: 1280px) {
+        margin-bottom: 80px;
+    }
 }
 
 .subscribe_title {
@@ -176,11 +208,14 @@ p {
     display: flex;
     justify-content: space-between;
     padding-bottom: 100px;
+    @media screen and (max-width: 767px) {
+        padding-bottom: 60px;
+    }
 }
 .privacy_list {
     display: flex;
-    & .privacy_item:nth-child(-n + 3) {
-        margin-left: 20px;
+    & .privacy_item:not(:last-child) {
+        margin-right: 20px;
     }
 }
 .privacy_item {
