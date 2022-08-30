@@ -10,10 +10,12 @@
   }
 
   @media screen and (min-width: $tablet) {
+    padding-bottom: 120px;
     background-image: url(/src/images/customers/bg/bg_m.png);
   }
 
   @media screen and (min-width: $desktop) {
+    padding-bottom: 200px;
     background-image: url(/src/images/customers/bg/bg_l.png);
   }
 }
