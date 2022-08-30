@@ -34,7 +34,7 @@
         </li>
       </ul>
     </nav>
-    <button class="order-btn" type="button">
+    <button class="order-btn" type="submit" data-modal-open>
       <span class="order-btn__text">Order Now</span>
     </button>
     <button class="menu-btn" type="button" data-menu-open>
@@ -77,6 +77,35 @@
           >
         </li>
       </ul>
+    </div>
+  </div>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn-close" type="button" data-modal-close>
+        <svg class="modal-btn-close__icon" width="11" height="11">
+          <use href="./images/header/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <p class="modal-slogan">Order Form</p>
+      <form class="modal-register-form">
+        <div class="modal-form-group" role="group">
+          <label class="modal-register">
+            <span class="modal-register__text">Name</span>
+            <input class="modal-input" type="text" name="user-name" />
+          </label>
+          <label class="modal-register">
+            <span class="modal-register__text">Phone number</span>
+            <input class="modal-input" type="tel" name="user-tel-number" />
+          </label>
+          <label class="modal-register">
+            <span class="modal-register__text">E-mail</span>
+            <input class="modal-input" type="email" name="user-e-mail" />
+          </label>
+        </div>
+        <button class="modal-submit-btn" type="submit">
+          <span>Send</span>
+        </button>
+      </form>
     </div>
   </div>
 </header>
