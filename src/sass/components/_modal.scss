@@ -29,11 +29,11 @@
     width: 458px;
   }
 }
-// .backdrop.is-hidden {
-//   visibility: hidden;
-//   opacity: 0;
-//   pointer-events: none;
-// }
+.backdrop.is-hidden {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
 
 .modal-btn-close {
   position: absolute;
