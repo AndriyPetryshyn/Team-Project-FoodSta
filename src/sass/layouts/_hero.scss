@@ -1,28 +1,35 @@
 .hero {
   &__section {
-    @extend %section;
-
+    padding-top: 139px;
     @media screen and (max-width: 767px) {
-      padding-bottom: 40px;
+      padding-bottom: 60px;
     }
     @media screen and (min-width: $tablet) {
-      padding-bottom: 0px;
+      margin-bottom: -30px;
     }
     @media screen and (min-width: $desktop) {
+      padding-top: 93px;
+      margin-bottom: -150px;
     }
   }
 
   &__container {
     @extend %container;
+    @media screen and (max-width: 1279px) {
+      position: relative;
+    }
+
     display: flex;
-    position: relative;
+    justify-content: space-between;
+    align-items: flex-end;
   }
   &__txt-block {
+    margin-top: auto;
+    margin-bottom: auto;
     @media screen and (min-width: $tablet) {
     }
     @media screen and (min-width: $desktop) {
       max-width: 502px;
-      margin-top: 100px;
     }
   }
   &__tittle {
@@ -73,25 +80,84 @@
     font-size: 13px;
     line-height: calc(20 / 13);
 
+    transition: background-color $bezier;
+
     background: #bbf330;
+
+    &:hover,
+    &:focus {
+      background-color: $color-green-accent;
+    }
   }
-  &__img {
-    position: absolute;
-
-    border-radius: 50%;
-
+  &__img-block {
     @media screen and (max-width: 767px) {
       display: none;
     }
     @media screen and (max-width: 1279px) {
-      border: 14px solid #ffe550;
+      position: absolute;
       top: 89px;
-      right: 40px;
+      right: 38px;
     }
     @media screen and (min-width: $desktop) {
-      right: 30px;
-      top: 14px;
-      border: 26px solid #ffe550;
+      position: relative;
+    }
+  }
+  &__img {
+    display: block;
+    border-radius: 50%;
+
+    overflow: hidden;
+    @include media-query(tablet) {
+      border: 14px solid $color-yellow;
+      min-width: 320px;
+      min-height: 320px;
+    }
+
+    @include media-query(desktop) {
+      border: 26px solid $color-yellow;
+    }
+  }
+  &__toggle {
+    display: flex;
+    position: absolute;
+    top: 146px;
+    left: -8px;
+    @media screen and (min-width: $desktop) {
+      top: 266px;
+      left: -14px;
+    }
+  }
+  &__img-btn:not(:last-child) {
+    margin-right: 268px;
+    @media screen and (min-width: $desktop) {
+      margin-right: 512px;
+    }
+  }
+
+  &__img-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+
+    height: 28px;
+    width: 34px;
+    @media screen and (min-width: $desktop) {
+      height: 40px;
+      width: 48px;
+    }
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    border: none;
+
+    transition: fill $bezier, box-shadow $bezier;
+
+    &:focus {
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.16);
+    }
+    &:hover .hero__img-icon {
+      fill: #7eb101;
     }
   }
 }
