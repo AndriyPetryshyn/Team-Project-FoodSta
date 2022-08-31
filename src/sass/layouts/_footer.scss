@@ -60,15 +60,25 @@ p {
         background-image: url(../images/footer/food/footrdesk.jpg);
         background-position: bottom;
     }
-}
-
-.footer_pictures {
-    @include media-query (tablet) {
+    @media screen and (min-width: 768px) and (max-width: 1279px) {
+        background-image: 
+        url('../images/footer/food/orange@2x-min.jpg');
+        background-size: 203px 365px;
+        background-position: top right;
         /*
-        background-size: 203px 365px;*/
-        background-image: url('../images/footer/food/orange@2x-min.jpg');
+        background-image: url('../images/footer/food/appleright@2x-min.jpg');
+        background-size: 170px 69px;
+        background-position: bottom right;*/
     }
 }
+/*
+.footer_pictures {
+    @include media-query (tablet) {
+        
+        background-size: 203px 365px;
+        background-image: url('../images/footer/food/orange@2x-min.jpg');
+    }
+}*/
 /*
 .subscribe__picture {
     margin-right: auto;
