@@ -2,7 +2,7 @@
   @extend %section;
   background-repeat: no-repeat;
   background-position: center;
-  background-size: cover;
+  background-size: 100% 100%;
   background-image: url(/src/images/customers/bg/bg_xs@.png);
 
   @media screen and (min-width: 321px) {
