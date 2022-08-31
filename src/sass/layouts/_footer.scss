@@ -64,9 +64,9 @@ p {
 
 .footer_pictures {
     @include media-query (tablet) {
-        background-size: 203px 365px;
-        
-        background-image: url('../images/footer/food/orange@1x-min.jpg');
+        /*
+        background-size: 203px 365px;*/
+        background-image: url('../images/footer/food/orange@2x-min.jpg');
     }
 }
 /*
