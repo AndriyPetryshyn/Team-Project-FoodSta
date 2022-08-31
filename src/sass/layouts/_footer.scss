@@ -69,7 +69,7 @@ p {
         background-size: 170px 69px;
         background-position: bottom right;*/
     }
-=======
+
   border-color: var(--footer-background-color);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -209,7 +209,7 @@ p {
     @media screen and (min-width: 1280px) {
         margin-bottom: 80px;
     }
-=======
+
   margin-right: 154px;
 }
 
@@ -279,12 +279,12 @@ p {
     }
 
     cursor: pointer;
-=======
+
   margin-bottom: 12px;
 }
 
 
-}
+
 .subscribe_text {
   font-family: 'Roboto';
   font-style: normal;
@@ -343,13 +343,13 @@ p {
             margin-right: 20px;
         }
     }
-=======
+
   display: flex;
   justify-content: space-between;
   padding-bottom: 100px;
 }
 
-}
+
 .privacy_item {
   color: var(--primary-text-color);
 }
@@ -360,6 +360,6 @@ p {
 }
 .privacy_text {
     text-align: center;
-=======
+
 
 }

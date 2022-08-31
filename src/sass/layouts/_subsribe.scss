@@ -1,4 +1,5 @@
 .subscribe {
+    @extend %section;
     margin-top: -40px;
     padding-top: 0;
 
@@ -15,6 +16,7 @@
 
 
 .subscribe__main {
+    @extend %container;
     @include media-query(desktop) {
         display: flex;
         flex-direction: row;
