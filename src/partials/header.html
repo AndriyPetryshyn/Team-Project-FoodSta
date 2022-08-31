@@ -34,13 +34,127 @@
         </li>
       </ul>
     </nav>
-    <button class="order-btn" type="button">
+    <button class="order-btn" type="submit" data-modal-open>
       <span class="order-btn__text">Order Now</span>
     </button>
-    <button class="menu-btn" type="button">
+    <button class="menu-btn" type="button" data-menu-open>
       <svg class="menu-btn__icon" width="28" height="28">
         <use href="./images/header/icons.svg#icon-menu"></use>
       </svg>
     </button>
+  </div>
+  <div class="menu-overlay" data-menu>
+    <div class="mobile-container">
+      <button class="btn-close" type="button" data-menu-close>
+        <svg class="btn-close__icon" width="11" height="11">
+          <use href="./images/header/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="#"
+            ><span class="mobile-nav__text">Home</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="#"
+            ><span class="mobile-nav__text">About</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="#"
+            ><span class="mobile-nav__text">Service</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="#menu"
+            ><span class="mobile-nav__text">Menu</span></a
+          >
+        </li>
+        <li class="mobile-nav__item">
+          <a class="mobile-nav__link" href="#"
+            ><span class="mobile-nav__text">Contact</span></a
+          >
+        </li>
+      </ul>
+    </div>
+  </div>
+  <div class="backdrop is-hidden" data-modal>
+    <div class="modal">
+      <button class="modal-btn-close" type="button" data-modal-close>
+        <svg class="modal-btn-close__icon" width="11" height="11">
+          <use href="./images/header/icons.svg#icon-cross"></use>
+        </svg>
+      </button>
+      <p class="modal-slogan">Order Form</p>
+      <form class="modal-register-form">
+        <div class="modal-form-group" role="group">
+          <label class="modal-register">
+            <span class="modal-register__text">Name</span>
+            <input
+              required
+              minlength="3"
+              maxlength="25"
+              class="modal-input"
+              type="text"
+              name="user-name"
+              placeholder="Your name"
+            />
+            <svg class="contact-form-icon" width="12" height="12">
+              <use
+                class="contact-form-warning"
+                href="./images/header/icons.svg#icon-warning"
+              ></use>
+            </svg>
+            <span class="contact-form-notfication"
+              >The name must be between 3 and 25 characters</span
+            >
+          </label>
+          <label class="modal-register">
+            <span class="modal-register__text">Phone number</span>
+            <input
+              required
+              class="modal-input"
+              pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+              type="tel"
+              name="user-tel-number"
+              placeholder="+38(0_ _) _ _ _   _ _   _ _"
+            />
+            <svg class="contact-form-icon" width="12" height="12">
+              <use
+                class="contact-form-warning"
+                href="./images/header/icons.svg#icon-warning"
+              ></use>
+            </svg>
+            <span class="contact-form-notfication"
+              >This phone must be in the format 099 000 00 00</span
+            >
+          </label>
+          <label class="modal-register">
+            <span class="modal-register__text">E-mail</span>
+            <input
+              required
+              pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+              class="modal-input"
+              type="email"
+              name="user-e-mail"
+              placeholder="example@gmail.com"
+            />
+            <svg class="contact-form-icon" width="12" height="12">
+              <use
+                class="contact-form-warning"
+                href="./images/header/icons.svg#icon-warning"
+              ></use>
+            </svg>
+            <span class="contact-form-notfication"
+              >Please enter a valid email address</span
+            >
+          </label>
+        </div>
+        <button class="modal-submit-btn" type="submit">
+          <span>Send</span>
+        </button>
+      </form>
+    </div>
   </div>
 </header>

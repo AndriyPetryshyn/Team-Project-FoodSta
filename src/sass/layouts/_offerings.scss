@@ -1,15 +1,188 @@
 .offering {
-  padding-bottom: 60px;
-}
-.offering__container {
-  @extend %container;
-}
+  &__section {
+    padding-bottom: 60px;
 
-.offering__btn {
-  border: 2px solid #7eb101;
-  border-radius: 30px;
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+    margin-right: auto;
+    margin-left: auto;
+    @media screen and (max-width: 767px) {
+      padding-top: 60px;
+    }
+    //min-screen mobile
+    background-image: url(../images/offerings/background/bg-@1x_mm.svg);
 
-  font-weight: 500;
-  font-size: 13px;
-  line-height: 150%;
+    // tablet
+    @media screen and (min-width: $tablet) {
+      background-image: url(../images/offerings/background/bg-@1x_md.svg);
+      padding-top: 115px;
+    }
+
+    // desktop
+    @media screen and (min-width: $desktop) {
+      background-image: url(../images/offerings/background/bg-@1x_lg.svg);
+      padding-bottom: 40px;
+      padding-top: 200px;
+    }
+  }
+
+  &__container {
+    @extend %container;
+
+    @media screen and (min-width: $tablet) and (max-width: 1279px) {
+      background-image: url(../images/offerings/aple2-@1x_md.png),
+        url(../images/offerings/aple3-@1x_md.png);
+      background-size: 166px 210px, 106px 136px;
+      background-repeat: no-repeat;
+      background-position: 418px 210px;
+      background-position: top 116px right 184px, top 190px right 32px;
+    }
+    @media screen and (min-width: $desktop) {
+      padding-bottom: 10px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__img {
+    display: flex;
+    @media screen and (max-width: 767px) {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 280px;
+    }
+
+    @media screen and (min-width: $tablet) {
+      max-width: 357px;
+    }
+    @media screen and (min-width: $desktop) {
+      display: block;
+      min-width: 550px;
+    }
+  }
+
+  &__txt-block {
+    padding-top: 60px;
+    @media screen and (min-width: $desktop) {
+      padding-top: 83px;
+      max-width: 573px;
+    }
+
+    width: 100%;
+  }
+  &__tittle {
+    margin-bottom: 28px;
+    max-width: 100%;
+
+    font-size: 28px;
+    line-height: calc(33 / 28);
+
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 20px;
+      font-size: 42px;
+      line-height: calc(49 / 42);
+    }
+  }
+  &__tittle-descr {
+    margin-bottom: 28px;
+    max-width: 100%;
+    font-size: 14px;
+    line-height: calc(16 / 14);
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
+      font-size: 16px;
+      line-height: calc(19 / 16);
+    }
+    @media screen and (min-width: $desktop) {
+      font-size: 16px;
+      line-height: calc(24 / 16);
+    }
+  }
+  &__list {
+    @extend %list;
+    margin-bottom: 28px;
+    gap: 28px;
+    @media screen and (min-width: $tablet) {
+      margin-bottom: 40px;
+      gap: 116px;
+      display: flex;
+    }
+    @media screen and (min-width: $desktop) {
+      margin-bottom: 32px;
+      gap: 67px;
+    }
+  }
+  &__item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 28px;
+    }
+  }
+  &__icon-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 48px;
+    height: 48px;
+
+    margin-bottom: 8px;
+
+    background-color: $color-white;
+    border-radius: 50%;
+  }
+  &__icon {
+    fill: #7eb101;
+  }
+  &__subtittle {
+    margin-bottom: 16px;
+
+    max-width: 100%;
+    max-width: 500px;
+
+    font-size: 18px;
+    line-height: 21px;
+
+    @media screen and (min-width: $desktop) {
+      font-size: 17px;
+      line-height: calc(24 / 17);
+    }
+  }
+  &__descr {
+    max-width: 100%;
+    width: 252px;
+
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+
+    @media screen and (min-width: $desktop) {
+      line-height: calc(21 / 14);
+    }
+  }
+  &__subescribe {
+    display: flex;
+    gap: 24px;
+  }
+  &__btn {
+    cursor: pointer;
+    padding: 9px 21px;
+    border: 2px solid $color-green-dark;
+    border-radius: 30px;
+
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 150%;
+
+    transition: border-color $bezier;
+
+    &:hover,
+    &:focus {
+      border-color: $color-olive;
+    }
+  }
+  &__txt {
+    @media screen and (min-width: $desktop) {
+      display: none;
+    }
+  }
 }
