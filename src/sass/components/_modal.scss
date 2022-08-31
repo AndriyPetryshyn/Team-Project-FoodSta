@@ -75,6 +75,7 @@
   margin-bottom: 32px;
 }
 .modal-register {
+  position: relative;
   display: block;
 }
 .modal-register__text {
@@ -135,4 +136,41 @@
   &:focus {
     background-color: $color-green;
   }
+}
+// форми
+
+.contact-form-notfication {
+  display: block;
+  width: 280px;
+
+  position: absolute;
+  bottom: -17;
+  left: 8%;
+  transform: scale(0.3);
+  transform-origin: center;
+  opacity: 0;
+  transition: opacity $bezier, transform $bezier;
+
+  font-weight: 500;
+  font-size: 13px;
+  line-height: 140%;
+
+  color: $color-peach;
+}
+.modal-input:invalid:required:not(:placeholder-shown)
+  ~ .contact-form-notfication {
+  opacity: 1;
+  transform: scale(1);
+}
+.contact-form-icon {
+  position: absolute;
+  bottom: -13;
+  right: 93%;
+  opacity: 0;
+  transform: scale(0.3);
+  transition: opacity $bezier transform $bezier;
+}
+.modal-input:invalid:required:not(:placeholder-shown) ~ .contact-form-icon {
+  opacity: 1;
+  transform: scale(1);
 }
