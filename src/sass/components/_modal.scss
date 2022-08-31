@@ -145,7 +145,7 @@
 
   position: absolute;
   bottom: -17;
-  left: 5%;
+  left: 8%;
   transform: scale(0.3);
   transform-origin: center;
   opacity: 0;
@@ -165,7 +165,7 @@
 .contact-form-icon {
   position: absolute;
   bottom: -13;
-  right: 96%;
+  right: 93%;
   opacity: 0;
   transform: scale(0.3);
   transition: opacity $bezier transform $bezier;
@@ -173,6 +173,4 @@
 .modal-input:invalid:required:not(:placeholder-shown) ~ .contact-form-icon {
   opacity: 1;
   transform: scale(1);
-
-  //   transition: opacity $bezier, transform $bezier;
 }
