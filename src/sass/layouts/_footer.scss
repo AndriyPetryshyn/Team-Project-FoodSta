@@ -270,21 +270,11 @@ p {
 /*-------    privacy   -------*/
 
 .privacy {
+    
     @media screen and (max-width: 767px) {
         font-weight: 400;
         font-size: 10px;
         line-height: 1.2;
-    }
-    @media screen and (max-width: 480px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        padding-bottom: 100px;
-    }
-    @media screen and (min-width: 481px) and (max-width: 767px) {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
         padding-bottom: 60px;
     }
 
@@ -297,8 +287,8 @@ p {
 }
 .privacy_list {
     display: flex;
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        justify-content: space-around;
+    @media screen and (min-width: 320px) and (max-width: 479px) {
+        justify-content: space-between;
         margin-bottom: 40px;
         & .privacy_item:not(:last-child) {
             margin-right: 35px;
@@ -306,7 +296,8 @@ p {
     }
 
     
-    @media screen and (min-width: 481px) and (max-width: 767px) {
+    @media screen and (min-width: 480px) and (max-width: 767px) {
+        justify-content: space-between;
         margin-bottom: 40px;
         & .privacy_item:not(:last-child) {
             margin-right: 35px;
