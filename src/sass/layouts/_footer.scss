@@ -56,19 +56,23 @@ p {
     margin-left: auto;
     margin-right: auto;
     box-shadow: var(--footer-box-shadow);
-    @media screen and (min-width: 1280px) {
-        background-image: url(../images/footer/food/footrdesk.jpg);
-        background-position: bottom;
-    }
+    @media screen and (max-width: 768px) {
+        background-image: 
+        url('../images/footer/food/orange@3x-min.jpg');
+        background-size: 104px 259px;
+        background-position: top right;
+    } 
+
     @media screen and (min-width: 768px) and (max-width: 1279px) {
         background-image: 
         url('../images/footer/food/orange@2x-min.jpg');
         background-size: 203px 365px;
         background-position: top right;
-        /*
-        background-image: url('../images/footer/food/appleright@2x-min.jpg');
-        background-size: 170px 69px;
-        background-position: bottom right;*/
+    }
+
+    @media screen and (min-width: 1280px) {
+        background-image: url(../images/footer/food/footrdesk.jpg);
+        background-position: bottom;
     }
 }
 /*
