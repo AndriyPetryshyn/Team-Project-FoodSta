@@ -9,43 +9,11 @@
   --subscribe-button-text-color: #2c2c2c;
   --subscribe-button-border-color: rgba(126, 177, 1, 1);
 }
-p {
-  padding: 0;
-}
-
-.container {
-  margin: 0 auto;
-  padding-left: 16px;
-  padding-right: 16px;
-
-  @media screen and (min-width: 480px) {
-    width: 480px;
-  }
-
-  @media screen and (min-width: 768px) {
-    width: 768px;
-  }
-
-  @media screen and (min-width: 320px) and(max-width: 767px) {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  @media screen and (min-width: 768px) and(max-width: 1279px) {
-    padding-left: 32px;
-    padding-right: 32px;
-  }
-  @media screen and (min-width: 1280px) {
-    padding-left: 16px;
-    padding-right: 16px;
-  }
-
-  @media screen and (min-width: 1280px) {
-    width: 1280px;
-  }
-}
 
 .footer {
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @extend %section;
+
+  @media screen and (min-width: $tablet) and (max-width: 1279px) {
     background-image: url('../images/footer/food/orange@2x-min.jpg');
     background-size: 203px 365px;
     background-position: top right;
@@ -54,7 +22,10 @@ p {
         background-size: 170px 69px;
         background-position: bottom right;*/
   }
-
+  @media screen and (min-width: $tablet) {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
   border-color: var(--footer-background-color);
   background-repeat: no-repeat;
   background-size: 100%;
@@ -67,13 +38,41 @@ p {
   }
 }
 
-.footer_wrap {
-  padding-top: 100px;
-  @media screen and (max-width: 767px) {
-    padding-top: 60px;
-  }
+.container {
+  @extend %container;
 
-  @media screen and (min-width: 1280px) {
+  // margin: 0 auto;
+  // padding-left: 16px;
+  // padding-right: 16px;
+
+  // @media screen and (min-width: 480px) {
+  //   width: 480px;
+  // }
+
+  // @media screen and (min-width: 768px) {
+  //   width: 768px;
+  // }
+
+  // @media screen and (min-width: 320px) and(max-width: 767px) {
+  //   padding-left: 20px;
+  //   padding-right: 20px;
+  // }
+  // @media screen and (min-width: 768px) and(max-width: 1279px) {
+  //   padding-left: 32px;
+  //   padding-right: 32px;
+  // }
+  // @media screen and (min-width: 1280px) {
+  //   padding-left: 16px;
+  //   padding-right: 16px;
+  // }
+
+  // @media screen and (min-width: 1280px) {
+  //   width: 1280px;
+  // };
+}
+
+.footer_wrap {
+  @media screen and (min-width: $desktop) {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
@@ -83,16 +82,16 @@ p {
 
 .footer_nav {
   display: flex;
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
 }
 
 .footer_logo {
-  @media screen and (max-width: 767px) {
-    margin-right: 81px;
-  }
-  @media screen and (min-width: 768px) and(max-width: 1279px) {
+  @media screen and (min-width: $tablet) {
     margin-right: 114px;
   }
-  @media screen and (min-width: 1280px) {
+  @media screen and (min-width: $desktop) {
     margin-right: 154px;
   }
 }
@@ -102,22 +101,25 @@ p {
   & .link {
     @extend %link;
     color: var(--primary-text-color);
-  }
-  & .link:hover,
-  & .link:focus {
-    color: var(--footer-link-focus-color);
+
+    transition: color $bezier;
+
+    &:hover,
+    &:focus {
+      color: var(--footer-link-focus-color);
+    }
   }
 
-  @media screen and (min-width: 768px) {
+  @media screen and (max-width: 767px) {
+    flex-direction: column;
+    margin-right: 80px;
+  }
+
+  @media screen and (min-width: $tablet) {
     display: flex;
     text-decoration: none;
     align-items: center;
-    & .footer_item:not(:last-child) {
-      margin-right: 28px;
-    }
-  }
-  @media screen and (max-width: 767px) {
-    flex-direction: column;
+    gap: 28px;
   }
 }
 
@@ -127,25 +129,25 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
-
+  margin-bottom: 60px;
   @media screen and (max-width: 767px) {
-    margin-top: 40px;
-    margin-bottom: 60px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 279px;
   }
-  @media screen and (min-width: 768px) and (max-width: 1279px) {
+  @media screen and (max-width: 1279px) {
     margin-top: 40px;
+  }
+  @media screen and (min-width: $tablet) {
     margin-bottom: 100px;
   }
   @media screen and (min-width: 1280px) {
+    justify-content: flex-end;
     margin-bottom: 80px;
   }
-
-  margin-right: 154px;
 }
 
 .subscribe_title {
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 150%;
@@ -154,6 +156,7 @@ p {
 }
 
 .subscribe_email {
+  margin-right: auto;
   @media screen and (max-width: 767px) {
     display: flex;
     flex-direction: column;
@@ -166,12 +169,11 @@ p {
 }
 
 .subscribe_input {
-  font-family: 'Roboto';
-  font-style: normal;
   font-size: 12px;
   line-height: 150%;
 
-  width: 279px;
+  max-width: 279px;
+  width: 100%;
   height: 42px;
   padding-left: 12px;
 
@@ -179,19 +181,31 @@ p {
   border: 1px solid var(--subscribe-input-border-color);
   background-color: var(--background-color);
   border-radius: 30px;
+  transition: border-color $bezier;
+  outline: none;
+  &:hover,
+  &:focus {
+    border-color: #7eb101;
+  }
+
+  @media screen and (min-width: 768px) and (max-width: 1279px) {
+    margin-right: 12px;
+  }
+
   @media screen and (max-width: 767px) {
     margin-bottom: 20px;
   }
+
+  @media screen and (min-width: $desktop) {
+    margin-bottom: 12px;
+  }
 }
 .subscribe_button {
-  font-family: 'Roboto';
   width: 102px;
   height: 42px;
-  margin-left: 12px;
+
   color: var(--subscribe-button-text-color);
 
-  font-family: 'Roboto';
-  font-style: normal;
   font-weight: 400;
   font-size: 12px;
   line-height: 150%;
@@ -200,28 +214,26 @@ p {
   border-radius: 30px;
   border: 1px solid var(--subscribe-button-border-color);
 
+  transition: background-color $bezier;
+
   &:hover,
   &:focus {
     background-color: var(--subscribe-input-border-color);
-    transition: background-color 250ms var(--subscribe-input-border-color);
   }
 
   cursor: pointer;
-
-  margin-bottom: 12px;
+  @media screen and (max-width: 1279) {
+    margin-left: 121px;
+  }
 }
 
 .subscribe_text {
-  font-family: 'Roboto';
   font-style: normal;
-  font-weight: 400;
+
   font-size: 12px;
   line-height: 1.16;
 }
 .subscribe_privacy {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-weight: 400;
   font-size: 12px;
   line-height: 1.16;
   color: var(--subscribe-button-border-color);
@@ -231,45 +243,25 @@ p {
 
 .privacy {
   @media screen and (max-width: 767px) {
-    font-weight: 400;
     font-size: 10px;
     line-height: 1.2;
-    padding-bottom: 60px;
   }
 
   @media screen and (min-width: 768px) {
     display: flex;
     justify-content: space-between;
-    padding-bottom: 100px;
   }
 }
 .privacy_list {
   @extend %list;
   display: flex;
-  @media screen and (min-width: 320px) and (max-width: 479px) {
-    justify-content: space-between;
-    margin-bottom: 40px;
-    & .privacy_item:not(:last-child) {
-      margin-right: 35px;
-    }
-  }
-
-  @media screen and (min-width: 480px) and (max-width: 767px) {
-    justify-content: space-between;
-    margin-bottom: 40px;
-    & .privacy_item:not(:last-child) {
-      margin-right: 35px;
-    }
-  }
-  @media screen and (min-width: 768px) {
-    & .privacy_item:not(:last-child) {
-      margin-right: 20px;
-    }
-  }
-
-  display: flex;
   justify-content: space-between;
-  padding-bottom: 100px;
+  @media screen and (min-width: $tablet) {
+    gap: 20px;
+  }
+  @media screen and (max-width: 767px) {
+    margin-bottom: 40px;
+  }
 }
 
 .privacy_item {
@@ -277,8 +269,13 @@ p {
 }
 
 .privacy_link {
-  @extend %link;
   color: var(--subscribe-button-border-color);
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 12px;
+  @media screen and (min-width: $tablet) {
+    font-size: 12px;
+  }
 }
 .privacy_text {
   text-align: center;
