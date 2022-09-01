@@ -186,6 +186,7 @@ p {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    font-family: inherit;
     
     @media screen and (max-width: 767px) {
         margin-top: 40px;
@@ -201,11 +202,9 @@ p {
 }
 
 .subscribe_title {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 600;
     font-size: 14px;
-    line-height: 150%;
+    line-height: 1.2;
     margin-bottom: 12px;
     color: var(--primary-text-color);
 }
@@ -223,8 +222,6 @@ p {
 }
 
 .subscribe_input {
-    font-family: 'Roboto';
-    font-style: normal;
     font-size: 12px;
     line-height: 150%;
 
@@ -241,14 +238,11 @@ p {
     }
 }
 .subscribe_button{
-    font-family: 'Roboto';
     width: 102px;
     height: 42px;
     margin-left: 12px;
     color: var(--subscribe-button-text-color);
     
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 150%;
@@ -266,15 +260,11 @@ p {
     cursor: pointer;
 }
 .subscribe_text {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
 }
 .subscribe_privacy {
-    font-family: 'Roboto';
-    font-style: normal;
     font-weight: 400;
     font-size: 12px;
     line-height: 1.16;
@@ -332,4 +322,5 @@ p {
 }
 .privacy_text {
     text-align: center;
+    color: var(--primary-text-color);
 }
